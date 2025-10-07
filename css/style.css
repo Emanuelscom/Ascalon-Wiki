@@ -248,6 +248,83 @@ table.dataTable thead th i {
   text-align: center;
 }
 
+/* Fixes para Spells Table - Full-width y sin scroll horizontal */
+#spellsTable_wrapper {
+  width: 100% !important;
+  margin: 0 !important;
+  overflow-x: hidden !important;  /* Mata el scroll horizontal forzado */
+}
+
+#spellsTable {
+  width: 100% !important;
+  table-layout: fixed;  /* Fuerza columnas fijas para evitar desborde */
+  overflow-x: hidden;  /* Doble seguro contra scroll */
+}
+
+#spellsTable img {
+  width: 250px !important;  /* Ancho FIJO: todas iguales, sin variar */
+  height: auto !important;  /* Alto auto: se ajusta proporcional */
+  object-fit: contain;  /* Mantiene proporción, centra si hace falta – no distorsiona */
+  display: block;  /* Centra la img en su celda */
+  margin: 0 auto;  /* Centrado horizontal en la celda */
+}
+
+#spellsTable th:nth-child(2),  /* Spell */
+#spellsTable td:nth-child(2) {
+  width: 10%;  /* Chiquita */
+}
+
+#spellsTable th:nth-child(3),  /* Description */
+#spellsTable td:nth-child(3) {
+  width: 30%;  /* Un toque menos para dar espacio a imgs */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+#spellsTable th:nth-child(4),  /* Level */
+#spellsTable td:nth-child(4) {
+  width: 6%;  /* Muy chica, es un número */
+}
+
+#spellsTable th:nth-child(5),  /* Cooldown */
+#spellsTable td:nth-child(5) {
+  width: 6%;  /* Muy chica */
+}
+
+#spellsTable th:nth-child(6),  /* Vocation */
+#spellsTable td:nth-child(6) {
+  width: 12%;  /* Suficiente */
+}
+
+#spellsTable th:nth-child(7),  /* Image */
+#spellsTable td:nth-child(7) {
+  width: 25%;  /* Más ancho para imgs grandes – clave! */
+}
+
+/* En mobile, achica pero visible */
+@media (max-width: 768px) {
+  #spellsTable img {
+    width: 180px !important;  /* Ancho fijo en phone también */
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #spellsTable td:nth-child(3) {
+    white-space: normal;
+    font-size: 0.75rem;  /* Letra más chica en mobile */
+  }
+  
+  .table-responsive {
+    font-size: 0.75rem;
+  }
+}
+
+
+
+
 
 
 
