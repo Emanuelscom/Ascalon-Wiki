@@ -63,6 +63,15 @@ $(document).ready(function() {
       { targets: 0, visible: false },  // Oculta la columna Group
       { targets: [2, 5], className: 'text-start' },  // Description y Vocation alineados a la izquierda
       { targets: [3, 4, 6], className: 'text-center' },  // Level, Cooldown e Image centrados
+      { 
+        targets: 3,  // Level column: sort numérico
+        render: function(data, type) {
+          if (type === 'sort' || type === 'type') {
+            return parseInt(data, 10) || 0;  // Convierte a número para ordenar bien (1, 50, 100)
+          }
+          return data;
+        }
+      },
       { targets: 6, orderable: false }  // Image no sortable
     ]
   });
@@ -106,10 +115,15 @@ $(document).ready(function() {
     }
   });
 
-  // Filtro por sub-vocación
+  // Filtro por sub-vocación (fix: incluye "MAGE-ALL" y multis como "MAGE-Mage MAGE-Wizard")
   $('#subFilter').on('change', function() {
-    var subVal = this.value;
-    table.column(0).search(subVal, false, false).draw();
+    var subVal = this.value;  // ej: 'MAGE-Mage'
+    var group = subVal.split('-')[0];  // 'MAGE'
+    var specific = subVal.split('-')[1];  // 'Mage'
+    
+    // Regex sin anchors: busca el specific O el ALL del grupo (matchea en celdas con múltiples)
+    var searchRegex = group + '-(ALL|' + specific + ')';
+    table.column(0).search(searchRegex, true, false).draw();
   });
 
   // Trigger inicial para All (solo comunes)
