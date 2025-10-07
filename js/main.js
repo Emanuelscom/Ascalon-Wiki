@@ -54,7 +54,7 @@ $(document).ready(function() {
 // Spells Table
 $(document).ready(function() {
   var table = $('#spellsTable').DataTable({
-    paging: true,
+    paging: false,  // Sin paginación – todo de una
     searching: true,
     info: false,
     ordering: true,
@@ -65,7 +65,6 @@ $(document).ready(function() {
       { targets: [3, 4, 6], className: 'text-center' },  // Level, Cooldown e Image centrados
       { targets: 6, orderable: false }  // Image no sortable
     ]
-    // Removí drawCallback: no más scroll suave en paginación/filtros
   });
 
   // Opciones de sub-filtros por grupo (sin "All" – solo specifics)
