@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ascalon Online Wiki</title>
+  <link rel="icon" type="image/png" href="img/logowiki.png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+  <!-- NAVBAR START -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="img/logowiki.png" alt="Ascalon Logo" width="40" height="40" class="nav-logo me-2">
+  <span class="fw-bold">Ascalon Wiki</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <!-- Quests -->
+        <li class="nav-item"><a class="nav-link" href="quests.html">Quests</a></li>
+        
+        <!-- Checkpoints -->
+        <li class="nav-item"><a class="nav-link" href="checkpoints.html">Checkpoints</a></li>
+
+        <!-- Outfits -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="outfitsDropdown" role="button">
+            Outfits
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="addons.html">Addons</a></li>
+            <li><a class="dropdown-item" href="mounts.html">Mounts</a></li>
+          </ul>
+        </li>
+
+        <!-- Vocations -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="vocationsDropdown" role="button">
+            Classes
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="vocations.html">Vocations</a></li>
+            <li><a class="dropdown-item" href="spells.html">Spells</a></li>
+          </ul>
+        </li>
+
+        <!-- Items -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="itemsDropdown" role="button">
+            Items
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="items/helmets.html">Helmets</a></li>
+            <li><a class="dropdown-item" href="items/armors.html">Armors</a></li>
+            <li><a class="dropdown-item" href="items/legs.html">Legs</a></li>
+            <li><a class="dropdown-item" href="items/boots.html">Boots</a></li>
+            <li><a class="dropdown-item" href="items/shields.html">Shields</a></li>
+            <li><a class="dropdown-item" href="items/rings.html">Rings</a></li>
+            <li><a class="dropdown-item" href="items/amulets.html">Amulets</a></li>
+            <li><a class="dropdown-item" href="items/trinkets.html">Trinkets</a></li>
+          </ul>
+        </li>
+
+        <!-- Upgrades -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="itemsDropdown" role="button">
+            Upgrades
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="items/gems.html">Gems</a></li>
+            <li><a class="dropdown-item" href="items/stones.html">Stones</a></li>
+            <li><a class="dropdown-item" href="items/crafting.html">Crafting</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--NAVBAR FINISH -->
+
+
+
+
+
+  <!-- Header -->
+<header class="text-center p-5 bg-dark text-light">
+  <h1 class="display-5 fw-bold">Outfits</h1>
+  <p class="lead">Complete list of outfits and their addons in <span class="text-color-one">Ascalon</span>.</p>
+</header>
+
+
+
+
+
+
+
+  <!-- Main Content -->
+<main class="container my-5">
+  <div class="table-responsive">
+    <table id="addonsTable" class="table table-dark table-hover align-middle text-center">
+    <thead class="table-primary">
+        <tr>
+        <th class="text-center"><i class="bi bi-camera"></i></th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Outfit</th>
+        <th class="text-center">First Addon</th>
+        <th class="text-center">Second Addon</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><img src="img/outfits/afflicted.gif" alt="Afflicted" width="64" height="64"></td>
+        <td class="text-start">Afflicted</td>
+        <td class="text-start">Full outfit and addons obtainable from Ascalon Token Levers. Cost: 50 Ascalon Tokens.</td>
+        <td>-</td>
+        <td>-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/oldschool.gif" alt="Old School" width="64" height="64"></td>
+        <td class="text-start">Old School Outfits</td>
+        <td class="text-start">NPC Grimlidin:<br>Get 30 candies and 350000 Gold Coins.</td>
+        <td>-</td>
+        <td>-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/assassin.gif" alt="Assassin" width="64" height="64"></td>
+        <td class="text-start">Assassin</td>
+        <td class="text-start">NPC Erayo:<br>
+                               First: Get 45 Dirty Turbants.<br>
+                               Second: Get 40 Red Piece of Cloth.<br>
+                               Third: Get 25 Spider Silk.
+        </td>
+        <td class="text-start">NPC Erayo: Kill this monsters in order:<br>
+            1 Mine Defender, 1 Lizard Sentinel, 1 Green Djinn, 1 Serpent Spawn 1 Orc Overseer and 1 Frost Maiden.<br>
+            (Beware not to kill any other monster or it will reset)</td>
+        <td class="text-start">NPC Erayo:<br>Get 100 Lizard Leathers and 100 Lizard Scales.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/awsome.gif" alt="Awsome" width="64" height="64"></td>
+        <td class="text-start">Awsome</td>
+        <td class="text-start">NPC Dan:<br>
+        Full outfit and addons obtained by killing 550 Zealots.</td>
+        <td>-</td>
+        <td>-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/barbarian.gif" alt="Barbarian" width="64" height="64"></td>
+        <td class="text-start">Barbarian</td>
+        <td class="text-start">Find and kill Barbarian Leader on Ice lands.</td>
+        <td class="text-start">NPC Khaldor:<br>Get 30 Grade 3 Gems.</td>
+        <td class="text-start">Talk to NPC Ajax to unlock it.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/beggar.gif" alt="Beggar" width="64" height="64"></td>
+        <td class="text-start">Beggar</td>
+        <td class="text-start">NPC Simon The Beggar:<br>Donate 10.000 Gold Coins.</td>
+        <td class="text-start">NPC Simon The Beggar:<br>Get 100 Tauren Leathers.</td>
+        <td class="text-start">NPC Simon The Beggar:<br>Get a Simon's favorite staff.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/brotherhood.gif" alt="Brotherhood" width="64" height="64"></td>
+        <td class="text-start">Brotherhood</td>
+        <td class="text-start">NPC Time Traveller:<br>Full outfit and addons obtained by collecting 16 Unique Legendary Dolls. (They are hidden in any place of the map)</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/citizen.gif" alt="Citizen" width="64" height="64"></td>
+        <td class="text-start">Citizen</td>
+        <td class="text-start">Free.</td>
+        <td class="text-start">NPC Imgard:<br>Kill 25 Carrion Worms.</td>
+        <td class="text-start">NPC Eraleth:<br>Get 30 Chicken Feathers.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/cult.gif" alt="Cult" width="64" height="64"></td>
+        <td class="text-start">Cult</td>
+        <td class="text-start">NPC Cult Master:<br>
+                               Full outfit and addons obtained by killing 350 Arctic Goblins.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/deepling.gif" alt="deepling" width="64" height="64"></td>
+        <td class="text-start">Deepling</td>
+        <td class="text-start">NPC Dungeon Keeper:<br>Get 1 Obujos Shell.</td>
+        <td class="text-start">NPC Dungeon Keeper:<br>Get 1 Depth Scutum.</td>
+        <td class="text-start">NPC Dungeon Keeper:<br>Get 1 Soul Net.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/demonhunter.gif" alt="Demon Hunter" width="64" height="64"></td>
+        <td class="text-start">Demon Hunter</td>
+        <td class="text-start">NPC Casumi:<br>Get 5 Hellhound Slobbers, 5 High Guard Shoulderplates, 5 Werewolf Furs and 5 Spools of Yarn.</td>
+        <td class="text-start">NPC Casumi:<br>Kill 750 of both Banshees and Nightmare Scions.</td>
+        <td class="text-start">NPC Casumi:<br>Get a Demon Horn.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/druid.gif" alt="Druid" width="64" height="64"></td>
+        <td class="text-start">Druid</td>
+        <td class="text-start">NPC Morgase Trakand:<br>Full outfit and addons obtained when buying Premium Days.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/dwarven.gif" alt="Dwarven" width="64" height="64"></td>
+        <td class="text-start">Dwarven</td>
+        <td class="text-start">Full outfit and addons can be obtained when using Dwarf Outfit Scroll which can be obtained from the Dwarven Dungeon.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/elementalist.gif" alt="Elementalist" width="64" height="64"></td>
+        <td class="text-start">Elementalist</td>
+        <td class="text-start">NPC Eila:<br>Kill 300 Bog Raiders.</td>
+        <td class="text-start">NPC Eila:<br>Get Skeletron Emblem.</td>
+        <td class="text-start">NPC Eila:<br>Get 50 Gargoyle Wings.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/elf.gif" alt="Elf" width="64" height="64"></td>
+        <td class="text-start">Elf</td>
+        <td class="text-start">NPC Elfu Delfu:<br>Full outfit and addons can be obtained by killing 400 Disgustings.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/entrepreneur.gif" alt="Entrepreneur" width="64" height="64"></td>
+        <td class="text-start">Entrepreneur</td>
+        <td class="text-start">NPC Henrik:<br>Kill 300 Toxic Bugs.</td>
+        <td class="text-start">NPC Henrik:<br>Kill 200 Lava Golems.</td>
+        <td class="text-start">NPC Henrik:<br>Kill 500 Death Dragons.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/golden.gif" alt="Golden" width="64" height="64"></td>
+        <td class="text-start">Golden</td>
+        <td class="text-start">NPC Lucius Goldberg:<br>Donate 1.000.000 Gold Coins.</td>
+        <td class="text-start">NPC Lucius Goldberg:<br>Donate 1.000.000 Gold Coins.</td>
+        <td class="text-start">NPC Lucius Goldberg:<br>Donate 1.000.000 Gold Coins.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/hoodedbandit.gif" alt="Hooded Bandit" width="64" height="64"></td>
+        <td class="text-start">Hooded Bandit</td>
+        <td class="text-start">NPC Scarlock:<br>
+                               Use three Drinking Wells one in Orc Camp other in Smugglers Camp and last one in Elven Camp.</td>
+        <td class="text-start">Task for NPC Scarlock:<br>First: Click the Tent in Coryms Hideout.<br>
+                               Second: Kill 20 Serpent Spawns.</td>
+        <td class="text-start">NPC Scarlock:<br>Click the Crystal Pillar in Tribal Shamans.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/hunter.gif" alt="Hunter" width="64" height="64"></td>
+        <td class="text-start">Hunter</td>
+        <td class="text-start">NPC Carl:<br>Find NPC Barney in Orc Fortress.</td>
+        <td class="text-start">NPC Carl:<br>Collect 100 Elven Glasses.</td>
+        <td class="text-start">NPC Carl:<br>Kill 50 Zombies.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/insectoid.gif" alt="Insectoid" width="64" height="64"></td>
+        <td class="text-start">Insectoid</td>
+        <td class="text-start">Full outfit and addons available in Premium Shop for 80 points.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/jester.gif" alt="Jester" width="64" height="64"></td>
+        <td class="text-start">Jester</td>
+        <td class="text-start">NPC Shaco:<br>Finish his maze.</td>
+        <td class="text-start">NPC Eric:<br>Clear the 3 arena monsters:<br>First: Arkanaz [L.70].<br>Second: Tarricon [L.100]<br>Third: Karron [L.150].</td>
+        <td class="text-start">NPC Shaco:<br>Win a gambling game.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/knight.gif" alt="Knight" width="64" height="64"></td>
+        <td class="text-start">Knight</td>
+        <td class="text-start">Obtained by finishing the tower near NPC Duncan.</td>
+        <td class="text-start">NPC Duncan:<br>Kill 300 royal elfs.</td>
+        <td class="text-start">NPC Duncan:<br>Get 50 Giant Toes.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/lightbringer.gif" alt="Lightbringer" width="64" height="64"></td>
+        <td class="text-start">Lightbringer</td>
+        <td class="text-start">Full outfit and addons obtained by using Lightbringer Doll droped by Prince Damean Boss.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/mage.gif" alt="Mage" width="64" height="64"></td>
+        <td class="text-start">Mage</td>
+        <td class="text-start">NPC Slevin:<br>Kill 50 Enraged Taurens.</td>
+        <td class="text-start">NPC Slevin:<br>Kill 40 Riding Orcs.</td>
+        <td class="text-start">NPC Slevin:<br>Kill 40 Elf Scouts.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/mythicalelf.gif" alt="Mythical Elf" width="64" height="64"></td>
+        <td class="text-start">Mythical Elf</td>
+        <td class="text-start">NPC Lirael:<br>Click a statue on Mythical Elves.</td>
+        <td class="text-start">NPC Lirael:<br>Kill 100 Mythical Elves.</td>
+        <td class="text-start">NPC Lirael:<br>Get 30 Yellow Piece of Cloth and secure the pixie stone in Hobgoblins.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/nightmare.gif" alt="Nightmare" width="64" height="64"></td>
+        <td class="text-start">Nightmare</td>
+        <td class="text-start">NPC Dworcius:<br>Kill 1000 Dworcs.</td>
+        <td class="text-start">NPC Dworcius:<br>Click a stone in Royal Elves Spawn (Mid building, top floor)</td>
+        <td class="text-start">NPC Dworcius:<br>Get 50 Hag Brooms.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/nobleman.gif" alt="Nobleman" width="64" height="64"></td>
+        <td class="text-start">Nobleman</td>
+        <td class="text-start">NPC Frikke:<br>Donate 150.000 Gold Coins.</td>
+        <td class="text-start">NPC Frikke:<br>Donate 150.000 Gold Coins.</td>
+        <td class="text-start">NPC Frikke:<br>Donate 150.000 Gold Coins.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/norseman.gif" alt="Norseman" width="64" height="64"></td>
+        <td class="text-start">Norseman</td>
+        <td class="text-start">NPC Kitry:<br>Kill 200 Tribal Hunters.</td>
+        <td class="text-start">NPC Kitry:<br>Get Ice Shard.</td>
+        <td class="text-start">NPC Kitry:<br>Get 90 Red Pieces of Cloth.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/oriental.gif" alt="Oriental" width="64" height="64"></td>
+        <td class="text-start">Oriental</td>
+        <td class="text-start">NPC Taur:<br>Get Djinn Lamp.</td>
+        <td class="text-start">NPC Taur:<br>Finish a Task.</td>
+        <td class="text-start">NPC Taur:<br>Get 100 Orc Leathers and 75 Giant Toes.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/pirate.gif" alt="Pirate" width="64" height="64"></td>
+        <td class="text-start">Pirate</td>
+        <td class="text-start">NPC Ron the Ripper:<br>Get 50 Cockroach Legs.</td>
+        <td class="text-start">NPC Ron the Ripper:<br>Get Ron the Ripper's Sabre.</td>
+        <td class="text-start">NPC Ron the Ripper:<br>Find a treasure.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/sage.gif" alt="Sage" width="64" height="64"></td>
+        <td class="text-start">Sage</td>
+        <td class="text-start">Full outfit and addons can be obtained doing 3 tasks for different NPC's:<br>
+                               First: NPC Sage:<br>Burn 4 Jade Spikes at basins at Venomancer Spawn, the 4th Jade Spike will teleport you to a room and need to get to the end of it.
+                               Second: NPC Jimmy Crimson:<br>Find the secret room at Draken Spellbinders.<br>Get to the end of the room and click the statue.
+                               Third: NPC Sage:<br>Kill 1000 Crimson Deep Monsters.
+                              </td>
+        <td class="text-center">-</td>
+        <td class="text-center">-<br></td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/shaman.gif" alt="Shaman" width="64" height="64"></td>
+        <td class="text-start">Shaman</td>
+        <td class="text-start">NPC Valroy:<br>Kill 40 Skeletons.</td>
+        <td class="text-start">NPC Valroy:<br>Get 30 Pelvis Bones.</td>
+        <td class="text-start">NPC Zimba:<br>Get 80 White Piece of Cloth.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/sinisterarcher.gif" alt="Sinister Archer" width="64" height="64"></td>
+        <td class="text-start">Sinister Archer</td>
+        <td class="text-start">Full outfit and addons can be obtained by completing Ice Arena Trinked Quest.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/summoner.gif" alt="Summoner" width="64" height="64"></td>
+        <td class="text-start">Summoner</td>
+        <td class="text-start">NPC Vizantis:<br>Get 40 Lancer Beetle Shells and 50 Poisonous Slimes.</td>
+        <td class="text-start">NPC Vizantis:<br>Catch 50 butterflies.</td>
+        <td class="text-start">NPC Vizantis:<br>Get 100 Giant Toes, 100 Green Dragon Leathers and 100 Pelvis Bones.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/tauren.gif" alt="Tauren" width="64" height="64"></td>
+        <td class="text-start">Tauren</td>
+        <td class="text-start">Full outfit and addons can be obtained doing a task for NPC Taurus:<br>Kill 500 Dark Lords.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/tormentor.gif" alt="Tormentor" width="64" height="64"></td>
+        <td class="text-start">Tormentor</td>
+        <td class="text-start">NPC Tormentus:<br>Get Enchanted Skull from Devourers Quest.</td>
+        <td class="text-start">NPC Tormentus:<br>Get 15 Grade 7 Ability Stones and 30 Dark Scales. (Droped by Drakens while having Strenght Gloves equiped)</td>
+        <td class="text-start">NPC Tormentus:<br>Find a room deep in Mercenaries (You get teleported while having Strenght Gloves equiped) and find Eye of Corruption.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/trailblazer.gif" alt="Trailblazer" width="64" height="64"></td>
+        <td class="text-start">Trailblazer</td>
+        <td class="text-start">Full outfit and addons can be obtained by doing a task for NPC Frank:<br>Kill 500 Demon Skeletons.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/warmaster.gif" alt="Warmaster" width="64" height="64"></td>
+        <td class="text-start">Warmaster</td>
+        <td class="text-start">Full outfit and addons can be bought for 50 Dungeons Tokens.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/warrior.gif" alt="Warrior" width="64" height="64"></td>
+        <td class="text-start">Warrior</td>
+        <td class="text-start">NPC Morgase Trakand:<br>Full outfit and addons obtained when buying Premium Days.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/wayfarer.gif" alt="Wayfarer" width="64" height="64"></td>
+        <td class="text-start">Wayfarer</td>
+        <td class="text-start">NPC Jimmy Crimson:<br>Kill 350 Undead Gladiators.</td>
+        <td class="text-start">NPC Jimmy Crimson:<br>Kill 450 Desert Guards.</td>
+        <td class="text-start">NPC Jimmy Crimson:<br>Kill 500 Draken Spellbinders.</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/wedding.gif" alt="Wedding" width="64" height="64"></td>
+        <td class="text-start">Wedding</td>
+        <td class="text-start">Get full outfit and addons by getting married.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/winterwarden.gif" alt="Winter Warden" width="64" height="64"></td>
+        <td class="text-start">Winter Warden</td>
+        <td class="text-start">Full outfit and addons can be obtained in a quest in Frozemoths in level 400 area.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/wizard.gif" alt="Wizard" width="64" height="64"></td>
+        <td class="text-start">Wizard</td>
+        <td class="text-start">NPC Morgase Trakand:<br>Full outfit and addons obtained when buying Premium Days.</td>
+        <td class="text-center">-</td>
+        <td class="text-center">-</td>
+        </tr>
+        <tr>
+        <td><img src="img/outfits/yalaharian.gif" alt="Yalaharian" width="64" height="64"></td>
+        <td class="text-start">Yalaharian</td>
+        <td class="text-start">NPC Angus:<br>First: Get Pickaxe Recipe and make it.<br>
+                               Second: Use Pick in the Ice Block on "DHQ" in Ice Golems.<br>
+                               Third: Get a sample of Jade Spike plant in lizards city.</td>
+        <td class="text-start">NPC Angus:<br>First: Get the urn downstairs in Lizards 150+ Quest.
+                                             Second: Get 75 Lumps of Earth.</td>
+        <td class="text-start">NPC Angus:<br>First: Get a Orcish Powder next to a chests in a cart of Orc Fortess Quest.<br>
+                                             Second: Kill a Ghost and get the corpse.<br>
+                                             Third: Unlock 31 teleporters.</td>
+        </tr>
+   <!-- <tr>
+        <td><img src="#" alt="#" width="64" height="64"></td>
+        <td class="text-start">#</td>
+        <td class="text-start">#</td>
+        <td class="text-start">#</td>
+        <td class="text-start">#</td>
+        </tr>
+        <tr> -->
+
+
+    </tbody>
+    </table>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+<footer class="text-center p-3 bg-dark text-secondary small">
+  <p class="m-0">Built by <strong class="text-color-one">Relaxx</strong> · Ascalon.Online Wiki © 2025</p>
+</footer>
+
+
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery + DataTables JS -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+  <!-- My js -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

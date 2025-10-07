@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ascalon Online Wiki</title>
+  <link rel="icon" type="image/png" href="img/logowiki.png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+  <!-- NAVBAR START -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="img/logowiki.png" alt="Ascalon Logo" width="40" height="40" class="nav-logo me-2">
+  <span class="fw-bold">Ascalon Wiki</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <!-- Quests -->
+        <li class="nav-item"><a class="nav-link" href="quests.html">Quests</a></li>
+        
+        <!-- Checkpoints -->
+        <li class="nav-item"><a class="nav-link" href="checkpoints.html">Checkpoints</a></li>
+
+        <!-- Outfits -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="outfitsDropdown" role="button">
+            Outfits
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="addons.html">Addons</a></li>
+            <li><a class="dropdown-item" href="mounts.html">Mounts</a></li>
+          </ul>
+        </li>
+
+        <!-- Vocations -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="vocationsDropdown" role="button">
+            Classes
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="vocations.html">Vocations</a></li>
+            <li><a class="dropdown-item" href="spells.html">Spells</a></li>
+          </ul>
+        </li>
+
+        <!-- Items -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="itemsDropdown" role="button">
+            Items
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="items/helmets.html">Helmets</a></li>
+            <li><a class="dropdown-item" href="items/armors.html">Armors</a></li>
+            <li><a class="dropdown-item" href="items/legs.html">Legs</a></li>
+            <li><a class="dropdown-item" href="items/boots.html">Boots</a></li>
+            <li><a class="dropdown-item" href="items/shields.html">Shields</a></li>
+            <li><a class="dropdown-item" href="items/rings.html">Rings</a></li>
+            <li><a class="dropdown-item" href="items/amulets.html">Amulets</a></li>
+            <li><a class="dropdown-item" href="items/trinkets.html">Trinkets</a></li>
+          </ul>
+        </li>
+
+        <!-- Upgrades -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="itemsDropdown" role="button">
+            Upgrades
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="items/gems.html">Gems</a></li>
+            <li><a class="dropdown-item" href="items/stones.html">Stones</a></li>
+            <li><a class="dropdown-item" href="items/crafting.html">Crafting</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--NAVBAR FINISH -->
+
+
+
+
+
+  <!-- Header -->
+<header class="text-center p-5 bg-dark text-light">
+  <h1 class="display-5 fw-bold">Spells</h1>
+  <p class="lead">Complete list of spells in <span class="text-color-one">Ascalon</p>
+</header>
+
+
+
+
+
+
+
+  <!-- Main Content -->
+<main class="container my-5">
+
+  <ul class="nav nav-tabs justify-content-center" id="spellTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">All Vocations</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="mage-tab" data-bs-toggle="tab" data-bs-target="#mage" type="button" role="tab">Mage</button>
+    </li>
+        <li class="nav-item" role="presentation">
+      <button class="nav-link" id="priest-tab" data-bs-toggle="tab" data-bs-target="#priest" type="button" role="tab">Priest</button>
+    </li>
+        <li class="nav-item" role="presentation">
+      <button class="nav-link" id="wizard-tab" data-bs-toggle="tab" data-bs-target="#wizard" type="button" role="tab">Wizard</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="archer-tab" data-bs-toggle="tab" data-bs-target="#archer" type="button" role="tab">Archer</button>
+    </li>
+        <li class="nav-item" role="presentation">
+      <button class="nav-link" id="assassin-tab" data-bs-toggle="tab" data-bs-target="#assassin" type="button" role="tab">Assassin</button>
+    </li>
+        <li class="nav-item" role="presentation">
+      <button class="nav-link" id="sharpshooter-tab" data-bs-toggle="tab" data-bs-target="#sharpshooter" type="button" role="tab">Sharpshooter</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="knight-tab" data-bs-toggle="tab" data-bs-target="#knight" type="button" role="tab">Knight</button>
+    </li>
+        <li class="nav-item" role="presentation">
+      <button class="nav-link" id="berserker-tab" data-bs-toggle="tab" data-bs-target="#berserker" type="button" role="tab">Berserker</button>
+    </li>
+        <li class="nav-item" role="presentation">
+      <button class="nav-link" id="crusader-tab" data-bs-toggle="tab" data-bs-target="#crusader" type="button" role="tab">Crusader</button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="spellTabsContent">
+
+    <!-- ALL VOCATIONS -->
+    <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Spell</th>
+              <th class="text-start">Description</th>
+              <th class="text-center">Level</th>
+              <th class="text-center">Cooldown</th>
+              <th>Vocation</th>
+              <th class="text-center">Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Exana Pox</td>
+              <td>Cures poison.</td>
+              <td>1</td>
+              <td>1s</td>
+              <td>
+                All Vocations.
+              </td>
+              <td><img src="img/spells/exanapox.png" alt="Exana Pox" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exura</td>
+              <td>
+                Light Healing.
+                </td>
+              <td>1</td>
+              <td>1s</td>
+              <td>
+                All Vocations.
+              </td>
+              <td><img src="img/spells/exura.png" alt="Exura" width="224"></td>
+            </tr>
+            <tr>
+              <td>Utevo Lux</td>
+              <td>
+                Light.
+                </td>
+              <td>1</td>
+              <td>1s</td>
+              <td>
+                All Vocations.
+              </td>
+              <td><img src="img/spells/utevolux.png" alt="Utevo Lux" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exiva "Name</td>
+              <td>
+                Find person, also works for NPC's and some Bosses.
+                </td>
+              <td>1</td>
+              <td>1s</td>
+              <td>
+                All Vocations.
+              </td>
+              <td><img src="img/spells/exiva.png" alt="Exiva" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exani Tera</td>
+              <td>
+                Magic Rope.
+                </td>
+              <td>1</td>
+              <td>1s</td>
+              <td>
+                All Vocations.
+              </td>
+              <td><img src="img/spells/exanitera.png" alt="Exani Tera" width="224"></td>
+            </tr>
+            <tr>
+              <td>
+                Exani Hur "Up<br>
+                Exani Hur "Down
+              </td>
+              <td>
+                Levitate up or down.
+                </td>
+              <td>1</td>
+              <td>1s</td>
+              <td>
+                All Vocations.
+              </td>
+              <td><img src="img/spells/exanihur.png" alt="Exani Hur" width="224"></td>
+            </tr>            
+            <tr>
+              <td>Exevo Pan</td>
+              <td>
+                Creates food
+                </td>
+              <td>1</td>
+              <td>1s</td>
+              <td>
+                All Vocations.
+              </td>
+              <td><img src="img/spells/exevopan.png" alt="Exevo Pan" width="224"></td>
+            </tr> 
+            <tr>
+              <td>Exorior</td>
+              <td>
+                First strike spell (Single Target).
+                </td>
+              <td>5</td>
+              <td>1s</td>
+              <td>
+                All Vocations.
+              </td>
+              <td><img src="img/spells/exorior.png" alt="Exorior" width="224"></td>
+            </tr> 
+            <tr>
+              <td>Utani Hur</td>
+              <td>
+                Haste.
+                </td>
+              <td>15</td>
+              <td>1s</td>
+              <td>
+                All Vocations.
+              </td>
+              <td><img src="img/spells/utanihur.png" alt="Utani Hur" width="224"></td>
+            </tr> 
+            <tr>
+              <td>Utevo Gran Lux</td>
+              <td>
+                Great Light
+                </td>
+              <td>50</td>
+              <td>1s</td>
+              <td>
+                All Vocations.
+              </td>
+              <td><img src="img/spells/utevogranlux.png" alt="Utevo Gran Lux" width="224"></td>
+            </tr> 
+            <!-- 
+            <tr>
+              <td>#</td>
+              <td>
+                #
+                </td>
+              <td>1</td>
+              <td>1s</td>
+              <td>
+                All Vocations.
+              </td>
+              <td><img src="img/spells/#" alt="#" width="224"></td>
+            </tr>
+              -->
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- MAGE -->
+    <div class="tab-pane fade show" id="mage" role="tabpanel" aria-labelledby="mage-tab">
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Spell</th>
+              <th>Description</th>
+              <th>Level</th>
+              <th>Cooldown</th>
+              <th>Vocation</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Utamo Vita</td>
+              <td>
+                Magic Shield:<br>
+                Mages: All damage taken reduces Mana instead of Hit Points.<br>
+                Archers: 30% of the damage taken reduces Mana instead of Hit Points.
+                </td>
+              <td>1</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Archer.
+              </td>
+              <td><img src="img/spells/utamovita.png" alt="Utamo Vita" width="224"></td>
+            </tr>            
+            <tr>
+              <td>Incursu</td>
+              <td>First AOE Spell.</td>
+              <td>10</td>
+              <td>2s</td>
+              <td>Mage.</td>
+              <td><img src="img/spells/incursu.png" alt="Incursu" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exorior Tantus</td>
+              <td>
+                Single target spell.
+                </td>
+              <td>25</td>
+              <td>1s</td>
+              <td>
+                Mage.
+              </td>
+              <td><img src="img/spells/exoriortantus.png" alt="Exorior Tantus" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exura Gran</td>
+              <td>
+                Intense Healing.
+                </td>
+              <td>25</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Archer.<br>
+                Wizard.<br>
+                Priest.<br>
+                Archer.<br>
+                Sharpshooter.<br>
+                Assassin.
+              </td>
+              <td><img src="img/spells/exuragran.png" alt="Exura Gran" width="224"></td>
+            </tr>
+            <tr>
+              <td>Navitas</td>
+              <td>
+                Energy AOE Spell.
+                </td>
+              <td>30</td>
+              <td>2s</td>
+              <td>
+                Mage.
+              </td>
+              <td><img src="img/spells/navitas.png" alt="Navitas" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exura Sio "Name</td>
+              <td>
+                Light Heal Friend.
+                </td>
+              <td>35</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Priest.
+              </td>
+              <td><img src="img/spells/exurasio.png" alt="Exura Sio" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exorior Ignis</td>
+              <td>
+                Single Target Spell.<br>There is 20% chance to burn (50 dmg\turn) your target on cast.
+              </td>
+              <td>45</td>
+              <td>1s</td>
+              <td>
+                Mage.
+              </td>
+              <td><img src="img/spells/exoriorignis.png" alt="Exorior Ignis" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exorior Glaciem</td>
+              <td>
+                Single Target Spell.<br>There is 20% chance to slow your target on cast.
+                </td>
+              <td>45</td>
+              <td>1s</td>
+              <td>
+                Mage.
+              </td>
+              <td><img src="img/spells/exoriorglaciem.png" alt="Exorior Glaciem" width="224"></td>
+            </tr>
+            <tr>
+              <td>Incumbo</td>
+              <td>
+                Increases your attack bonus by 30, but lowers defense bonus by 40 for next 25 seconds.
+                </td>
+              <td>50</td>
+              <td>90s</td>
+              <td>
+                Mage.
+              </td>
+              <td><img src="img/spells/incumbo.png" alt="Incumbo" width="224"></td>
+            </tr>
+            <tr>
+              <td>Navitas Morto</td>
+              <td>
+                Death AOE Spell.
+                </td>
+              <td>50</td>
+              <td>2s</td>
+              <td>
+                Mage.
+              </td>
+              <td><img src="img/spells/navitasmorto.png" alt="Navitas Morto" width="224"></td>
+            </tr>
+            <tr>
+              <td>Utani Gran Hur</td>
+              <td>
+                Strong Haste.
+                </td>
+              <td>50</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/utanigranhur.png" alt="Utani Gran Hur" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exura Vita</td>
+              <td>
+                Ultimate Healing.
+                </td>
+              <td>70</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.<br>
+                Archer.<br>
+                Sharpshooter.<br>
+                Assassin.
+              </td>
+              <td><img src="img/spells/exuravita.png" alt="Exura Vita" width="224"></td>
+            </tr>
+            <tr>
+              <td>Explosa</td>
+              <td>
+                Fire Wave Spell.
+                </td>
+              <td>70</td>
+              <td>1.8s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/explosa.png" alt="Explosa" width="224"></td>
+            </tr>
+            <tr>
+              <td>Trepide</td>
+              <td>
+                Stuns for 1.5 seconds all nearby creatures. Do not affect party members.
+                </td>
+              <td>75</td>
+              <td>25s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/trepide.png" alt="Trepide" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exorior Letum</td>
+              <td>
+                #
+                </td>
+              <td>80</td>
+              <td>1s</td>
+              <td>
+                Mage.
+              </td>
+              <td><img src="img/spells/exoriorletum.png" alt="Exorior Letum" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exorior Habitus</td>
+              <td>
+                #
+                </td>
+              <td>80</td>
+              <td>1s</td>
+              <td>
+                Mage.
+              </td>
+              <td><img src="img/spells/exoriorhabitus.png" alt="Exorior Habitus" width="224"></td>
+            </tr>
+            <tr>
+              <td>Ignis Fluctus</td>
+              <td>
+                #
+                </td>
+              <td>100</td>
+              <td>2s</td>
+              <td>
+                Mage.
+              </td>
+              <td><img src="img/spells/ignisfluctus.png" alt="Ignis Fluctus" width="224"></td>
+            </tr>
+            <tr>
+              <td>Gelum Funis</td>
+              <td>
+                #
+                </td>
+              <td>100</td>
+              <td>2s</td>
+              <td>
+                Mage.
+              </td>
+              <td><img src="img/spells/gelumfunis.png" alt="Gelum Funis" width="224"></td>
+            </tr>
+            <tr>
+              <td>Excoquat</td>
+              <td>
+                Single Target Spell.<br>There is 25% chance to burn your target on cast.
+                </td>
+              <td>120</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/excoquat.png" alt="Excoquat" width="224"></td>
+            </tr>
+            <tr>
+              <td>Arcanorum</td>
+              <td>
+                Single Target Spell.<br>There is 25% chance to burn mana or deal additional damage to your target on cast.
+                </td>
+              <td>120</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/arcanorum.png" alt="Arcanorum" width="224"></td>
+            </tr>
+            <tr>
+              <td>Catenam</td>
+              <td>
+                AOE Spell.<br>There is 10% chance to stun the target for 1.5 seconds.
+                </td>
+              <td>140</td>
+              <td>2s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/catenam.png" alt="Catenam" width="224"></td>
+            </tr>
+            <tr>
+              <td>Strues Ignis</td>
+              <td>
+                AOE Spell.<br>There is 22% chance to burn your target.
+                </td>
+              <td>140</td>
+              <td>2s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/struesignis.png" alt="Strues Ignis" width="224"></td>
+            </tr>
+            <tr>
+              <td>Crustallum</td>
+              <td>
+                Makes caster immune to damage and immobilized. Stuns nearby creatures and restores mana for every creature hit when immunity goes down. (Costs 25 Soul Points)
+                </td>
+              <td>150</td>
+              <td>40s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/crustallum.png" alt="Crustallum" width="224"></td>
+            </tr>
+            <tr>
+              <td>Adtonitus</td>
+              <td>
+                Single Target Spell.<br>There is 15% chance to deal critical strike.
+                </td>
+              <td>160</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/adtonitus.png" alt="Adtonitus" width="224"></td>
+            </tr>
+            <tr>
+              <td>Telum Gelu</td>
+              <td>
+                Single Target Spell.<br>There is 10% chance to freeze your target on cast(1 second).
+                </td>
+              <td>160</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/telumgelu.png" alt="Telum Gelu" width="224"></td>
+            </tr>
+            <tr>
+              <td>Nubes Everteret</td>
+              <td>
+                #
+                </td>
+              <td>190</td>
+              <td>2s</td>
+              <td>
+                Mage.<br>
+                Priest.
+              </td>
+              <td><img src="img/spells/nubeseverteret.png" alt="Nubes Everteret" width="224"></td>
+            </tr>
+            <tr>
+              <td>Furor Caeli</td>
+              <td>
+                AOE Spell.<br>There is a 15% chance to deal critical strike.
+                </td>
+              <td>190</td>
+              <td>2s</td>
+              <td>
+                Mage.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/furorcaeli.png" alt="Furor Caeli" width="224"></td>
+            </tr>     
+            <tr>
+              <td>Acidum Ictus</td>
+              <td>
+                #
+                </td>
+              <td>200</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Priest.
+              </td>
+              <td><img src="img/spells/acidumictus.png" alt="Acidum Ictus" width="224"></td>
+            </tr>              
+            <tr>
+              <td>Fulmen Pulso</td>
+              <td>
+                Single Target Spell.<br>There is 14% chance to stun your target on cast and deal extra damage.
+                </td>
+              <td>200</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/fulmenpulso.png" alt="Fulmen Pulso" width="224"></td>
+            </tr>              
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PRIEST -->
+    <div class="tab-pane fade" id="priest" role="tabpanel" aria-labelledby="priest-tab">
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Spell</th>
+              <th>Description</th>
+              <th>Level</th>
+              <th>Cooldown</th>
+              <th>Vocation</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#</td>
+              <td>?</td>
+              <td>8</td>
+              <td>5s</td>
+              <td>Priest.</td>
+              <td><img src="img/spells/#.png" alt="#" width="224"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- WIZARD -->
+    <div class="tab-pane fade" id="wizard" role="tabpanel" aria-labelledby="wizard-tab">
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Spell</th>
+              <th>Description</th>
+              <th>Level</th>
+              <th>Cooldown</th>
+              <th>Vocation</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Explosa</td>
+              <td>
+                Fire Wave Spell.
+                </td>
+              <td>70</td>
+              <td>1.8s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/explosa.png" alt="Explosa" width="224"></td>
+            </tr>
+            <tr>
+              <td>Trepide</td>
+              <td>
+                Stuns for 1.5 seconds all nearby creatures. Do not affect party members.
+                </td>
+              <td>75</td>
+              <td>25s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/trepide.png" alt="Trepide" width="224"></td>
+            </tr>
+            <tr>
+              <td>Excoquat</td>
+              <td>
+                Single Target Spell.<br>There is 25% chance to burn your target on cast.
+                </td>
+              <td>120</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/excoquat.png" alt="Excoquat" width="224"></td>
+            </tr>
+            <tr>
+              <td>Arcanorum</td>
+              <td>
+                Single Target Spell.<br>There is 25% chance to burn mana or deal additional damage to your target on cast.
+                </td>
+              <td>120</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/arcanorum.png" alt="Arcanorum" width="224"></td>
+            </tr>
+            <tr>
+              <td>Catenam</td>
+              <td>
+                AOE Spell.<br>There is 10% chance to stun the target for 1.5 seconds.
+                </td>
+              <td>140</td>
+              <td>2s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/catenam.png" alt="Catenam" width="224"></td>
+            </tr>
+            <tr>
+              <td>Strues Ignis</td>
+              <td>
+                AOE Spell.<br>There is 22% chance to burn your target.
+                </td>
+              <td>140</td>
+              <td>2s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/struesignis.png" alt="Strues Ignis" width="224"></td>
+            </tr>
+            <tr>
+              <td>Retrahitur</td>
+              <td>
+                Increases your attack bonus by 60, but lowers defense bonus by 80 for next 45 seconds.
+                </td>
+              <td>150</td>
+              <td>90s</td>
+              <td>
+                Wizard.
+              </td>
+              <td><img src="img/spells/retrahitur.png" alt="Retrahitur" width="224"></td>
+            </tr>
+            <tr>
+              <td>Crustallum</td>
+              <td>
+                Makes caster immune to damage and immobilized. Stuns nearby creatures and restores mana for every creature hit when immunity goes down. (Costs 25 Soul Points)
+                </td>
+              <td>150</td>
+              <td>40s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/crustallum.png" alt="Crustallum" width="224"></td>
+            </tr>
+            <tr>
+              <td>Adtonitus</td>
+              <td>
+                Single Target Spell.<br>There is 15% chance to deal critical strike.
+                </td>
+              <td>160</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/adtonitus.png" alt="Adtonitus" width="224"></td>
+            </tr>  
+            <tr>
+              <td>Telum Gelu</td>
+              <td>
+                Single Target Spell.<br>There is 10% chance to freeze your target on cast(1 second).
+                </td>
+              <td>160</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Priest.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/telumgelu.png" alt="Telum Gelu" width="224"></td>
+            </tr>   
+            <tr>
+              <td>Furor Caeli</td>
+              <td>
+                AOE Spell.<br>There is a 15% chance to deal critical strike.
+                </td>
+              <td>190</td>
+              <td>2s</td>
+              <td>
+                Mage.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/furorcaeli.png" alt="Furor Caeli" width="224"></td>
+            </tr>
+            <tr>
+              <td>Fulmen Pulso</td>
+              <td>
+                Single Target Spell.<br>There is 14% chance to stun your target on cast and deal extra damage.
+                </td>
+              <td>200</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Wizard.
+              </td>
+              <td><img src="img/spells/fulmenpulso.png" alt="Fulmen Pulso" width="224"></td>
+            </tr>                                                 
+            <tr>
+              <td>Inspiratione</td>
+              <td>
+                Single Target Spell.<br>There is 15% chance to burn your target on cast.
+                </td>
+              <td>240</td>
+              <td>1s</td>
+              <td>
+                Wizard.
+              </td>
+              <td><img src="img/spells/inspiratione.png" alt="Inspiratione" width="224"></td>
+            </tr>
+            <tr>
+              <td>Massae Ruptis</td>
+              <td>
+                AOE Spell.<br>There is 18% chance to burn your targets.
+                </td>
+              <td>260</td>
+              <td>2s</td>
+              <td>
+                Wizard.
+              </td>
+              <td><img src="img/spells/massaeruptis.png" alt="Massae Ruptis" width="224"></td>
+            </tr>
+            <tr>
+              <td>Inrepo</td>
+              <td>
+                Silences a target for 1.5 second and stealing part of his mana.
+                </td>
+              <td>300</td>
+              <td>25s</td>
+              <td>
+                Wizard.
+              </td>
+              <td><img src="img/spells/inrepo.png" alt="Inrepo" width="224"></td>
+            </tr>
+            <tr>
+              <td>Prophetes</td>
+              <td>
+                Single Target Spell.<br>There is 18% chance to deal critical damage.
+                </td>
+              <td>300</td>
+              <td>1s</td>
+              <td>
+                Wizard.
+              </td>
+              <td><img src="img/spells/prophetes.png" alt="Prophetes" width="224"></td>
+            </tr>
+            <tr>
+              <td>Crepitus Gelu</td>
+              <td>
+                AOE Spell.<br>There is 20% chance to shock your target.
+                </td>
+              <td>310</td>
+              <td>2s</td>
+              <td>
+                Wizard.
+              </td>
+              <td><img src="img/spells/crepitusgelu.png" alt="Crepitus Gelu" width="224"></td>
+            </tr>
+            <tr>
+              <td>Ice Sphere</td>
+              <td>
+                Single Target Spell.<br>There is 20% chance to cast twice.
+                </td>
+              <td>360</td>
+              <td>1s</td>
+              <td>
+                Wizard.
+              </td>
+              <td><img src="img/spells/icesphere.png" alt="Ice Sphere" width="224"></td>
+            </tr>
+            <tr>
+              <td>Crepitus Tenebris</td>
+              <td>
+                AOE Spell.<br>There is 20% chance to shock your target.
+                </td>
+              <td>380</td>
+              <td>2s</td>
+              <td>
+                Wizard.
+              </td>
+              <td><img src="img/spells/crepitustenebris.png" alt="Crepitus Tenebris" width="224"></td>
+            </tr>
+            <tr>
+              <td>Hellfire Rush</td>
+              <td>
+                Single Target Spell.<br>There is 20% chance to burn your target on cast.
+                </td>
+              <td>420</td>
+              <td>1s</td>
+              <td>
+                Wizard.
+              </td>
+              <td><img src="img/spells/hellfirerush.png" alt="Hellfire Rush" width="224"></td>
+            </tr>
+            <tr>
+              <td>Thunder Storm</td>
+              <td>
+                AOE Spell.<br>
+                </td>
+              <td>440</td>
+              <td>2s</td>
+              <td>
+                Wizard.
+              </td>
+              <td><img src="img/spells/thunderstorm.png" alt="Thunder Storm" width="224"></td>
+            </tr>
+            <tr>
+              <td>Lightning Strike</td>
+              <td>
+                Single Target Spell.<br>There is 28% chance to deal critical damage.
+                </td>
+              <td>550</td>
+              <td>1s</td>
+              <td>
+                Wizard.
+              </td>
+              <td><img src="img/spells/lightningstrike.png" alt="Lightning Strike" width="224"></td>
+            </tr>
+
+
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ARCHER -->
+    <div class="tab-pane fade" id="archer" role="tabpanel" aria-labelledby="archer-tab">
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Spell</th>
+              <th>Description</th>
+              <th>Level</th>
+              <th>Cooldown</th>
+              <th>Vocation</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Utamo Vita</td>
+              <td>
+                Magic Shield:<br>
+                Mages: All damage taken reduces Mana instead of Hit Points.<br>
+                Archers: 30% of the damage taken reduces Mana instead of Hit Points.
+                </td>
+              <td>1</td>
+              <td>1s</td>
+              <td>
+                Mage.<br>
+                Archer.
+              </td>
+              <td><img src="img/spells/utamovita.png" alt="Utamo Vita" width="224"></td>
+            </tr>            
+            <tr>
+              <td>#</td>
+              <td>?</td>
+              <td>12</td>
+              <td>4s</td>
+              <td>Archer.</td>
+              <td><img src="img/spells/#.png" alt="#" width="224"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ASSASSIN -->
+    <div class="tab-pane fade" id="assassin" role="tabpanel" aria-labelledby="assassin-tab">
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Spell</th>
+              <th>Description</th>
+              <th>Level</th>
+              <th>Cooldown</th>
+              <th>Vocation</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#</td>
+              <td>?</td>
+              <td>8</td>
+              <td>5s</td>
+              <td>Assassin.</td>
+              <td><img src="img/spells/#.png" alt="#" width="224"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SHARPSHOOTER -->
+    <div class="tab-pane fade" id="sharpshooter" role="tabpanel" aria-labelledby="sharpshooter-tab">
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Spell</th>
+              <th>Description</th>
+              <th>Level</th>
+              <th>Cooldown</th>
+              <th>Vocation</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#</td>
+              <td>?</td>
+              <td>8</td>
+              <td>5s</td>
+              <td>Sharpshooter.</td>
+              <td><img src="img/spells/#.png" alt="#" width="224"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- KNIGHT -->
+    <div class="tab-pane fade" id="knight" role="tabpanel" aria-labelledby="knight-tab">
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Spell</th>
+              <th>Description</th>
+              <th>Level</th>
+              <th>Cooldown</th>
+              <th>Vocation</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Inhaerere</td>
+              <td>
+                AOE Spell.
+              </td>
+              <td>10</td>
+              <td>2s</td>
+              <td>
+                Knight.
+              </td>
+              <td><img src="img/spells/inhaerere.png" alt="Inhaerere" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exeta Res</td>
+              <td>
+                Makes all creatures nearby change their target to the caster.
+              </td>
+              <td>20</td>
+              <td>1s</td>
+              <td>
+                Knight.<br>
+                Crusader.<br>
+                Berserker.
+              </td>
+              <td><img src="img/spells/exetares.png" alt="Exeta Res" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exorior Securis</td>
+              <td>
+                Single Target Spell.
+              </td>
+              <td>25</td>
+              <td>1s</td>
+              <td>
+                Knight.
+              </td>
+              <td><img src="img/spells/exoriorsecuris.png" alt="Exorior Securis" width="224"></td>
+            </tr>
+            <tr>
+              <td>Armaor</td>
+              <td>
+                AOE Spell.
+              </td>
+              <td>35</td>
+              <td>2s</td>
+              <td>
+                Knight.
+              </td>
+              <td><img src="img/spells/armaor.png" alt="Armaor" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exorior Ferum</td>
+              <td>
+                Single Target Spell.
+              </td>
+              <td>45</td>
+              <td>1s</td>
+              <td>
+                Knight.
+              </td>
+              <td><img src="img/spells/exoriorferum.png" alt="Exorior Ferum" width="224"></td>
+            </tr>
+            <tr>
+              <td>Tutamen</td>
+              <td>
+                #
+              </td>
+              <td>50</td>
+              <td>90s</td>
+              <td>
+                Knight.
+              </td>
+              <td><img src="img/spells/tutamen.png" alt="Tutamen" width="224"></td>
+            </tr>
+            <tr>
+              <td>Armaor Grando</td>
+              <td>
+                AOE Spell.
+              </td>
+              <td>50</td>
+              <td>2s</td>
+              <td>
+                Knight.
+              </td>
+              <td><img src="img/spells/armaorgrando.png" alt="Armaor Grando" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exana Mort</td>
+              <td>
+                Healing Spell.
+              </td>
+              <td>8</td>
+              <td>2s</td>
+              <td>
+                Knight.<br>
+                Berserker.<br>
+                Crusader.
+              </td>
+              <td><img src="img/spells/exanamort.png" alt="Exana Mort" width="224"></td>
+            </tr>
+            <tr>
+              <td>Vercun</td>
+              <td>
+                Stuns everyone in front of caster.
+              </td>
+              <td>75</td>
+              <td>10s</td>
+              <td>
+                Knight.<br>
+                Berserker.<br>
+                Crusader.                
+              </td>
+              <td><img src="img/spells/vercun.png" alt="Vercun" width="224"></td>
+            </tr>
+            <tr>
+              <td>Exorior Potens</td>
+              <td>
+                Single Target Spell.
+              </td>
+              <td>80</td>
+              <td>1s</td>
+              <td>
+                Knight.
+              </td>
+              <td><img src="img/spells/exoriorpotens.png" alt="Exorior Potens" width="224"></td>
+            </tr>
+            <tr>
+              <td>Scindam</td>
+              <td>
+                AOE Spell.
+              </td>
+              <td>100</td>
+              <td>2s</td>
+              <td>
+                Knight.
+              </td>
+              <td><img src="img/spells/scindam.png" alt="Scindam" width="224"></td>
+            </tr>
+            <tr>
+              <td>Confringes</td>
+              <td>
+                Single Target Spell.<br>There is 16% chance to slow your target and deal extra damage.
+              </td>
+              <td>120</td>
+              <td>1s</td>
+              <td>
+                Knight.<br>
+                Berserker.<br>
+                Crusader.
+              </td>
+              <td><img src="img/spells/confringes.png" alt="Confringes" width="224"></td>
+            </tr>
+            <tr>
+              <td>Territo Clamor</td>
+              <td>
+                AOE Spell.<br>There is 15% chance to injure your target.
+              </td>
+              <td>140</td>
+              <td>2s</td>
+              <td>
+                Knight.<br>
+                Berserker.<br>
+                Crusader.
+              </td>
+              <td><img src="img/spells/territoclamor.png" alt="Territo Clamor" width="224"></td>
+            </tr>
+            <tr>
+              <td>Fluctus</td>
+              <td>
+                Single Target Spell.<br>Charges to target and stuns if for 1.5 seconds. (Costs 25 Soul Points)
+              </td>
+              <td>150</td>
+              <td>15s</td>
+              <td>
+                Knight.<br>
+                Berserker.<br>
+                Crusader.
+              </td>
+              <td><img src="img/spells/fluctus.png" alt="Fluctus" width="224"></td>
+            </tr>
+            <tr>
+              <td>Conicio Vir</td>
+              <td>
+                Single Target Spell.<br>There is 15% chance to stun your target on cast and deal extra damage.
+              </td>
+              <td>160</td>
+              <td>1s</td>
+              <td>
+                Knight.<br>
+                Berserker.<br>
+                Crusader.
+              </td>
+              <td><img src="img/spells/coniciovir.png" alt="Conicio Vir" width="224"></td>
+            </tr>
+            <tr>
+              <td>Terraemotus</td>
+              <td>
+                AOE Spell.<br>There is 15% chance to slow down, as well as injure neaby enemies for 5 seconds.
+              </td>
+              <td>190</td>
+              <td>2s</td>
+              <td>
+                Knight.<br>
+                Berserker.<br>
+                Crusader.
+              </td>
+              <td><img src="img/spells/terraemotus.png" alt="Terraemotus" width="224"></td>
+            </tr>
+            <tr>
+              <td>Tonitruo</td>
+              <td>
+                Single Target Spell.<br>There is 15% chance to injure your target on cast.
+              </td>
+              <td>200</td>
+              <td>1s</td>
+              <td>
+                Knight.<br>
+                Berserker.<br>
+                Crusader.
+              </td>
+              <td><img src="img/spells/tonitruo.png" alt="Tonitruo" width="224"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- BERSERKER -->
+    <div class="tab-pane fade" id="berserker" role="tabpanel" aria-labelledby="berserker-tab">
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Spell</th>
+              <th>Description</th>
+              <th>Level</th>
+              <th>Cooldown</th>
+              <th>Vocation</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#</td>
+              <td>?</td>
+              <td>8</td>
+              <td>5s</td>
+              <td>Berserker.</td>
+              <td><img src="img/spells/#.png" alt="#" width="224"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CRUSADER -->
+    <div class="tab-pane fade" id="crusader" role="tabpanel" aria-labelledby="crusader-tab">
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Spell</th>
+              <th>Description</th>
+              <th>Level</th>
+              <th>Cooldown</th>
+              <th>Vocation</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#</td>
+              <td>?</td>
+              <td>8</td>
+              <td>5s</td>
+              <td>Crusader.</td>
+              <td><img src="img/spells/#.png" alt="#" width="224"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+<footer class="text-center p-3 bg-dark text-secondary small">
+  <p class="m-0">Built by <strong class="text-color-one">Relaxx</strong> · Ascalon.Online Wiki © 2025</p>
+</footer>
+
+
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery + DataTables JS -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+  <!-- My js -->
+  <script src="js/main.js"></script>
+</body>
+</html>

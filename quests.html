@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ascalon Online Wiki</title>
+  <link rel="icon" type="image/png" href="img/logowiki.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+  <!-- NAVBAR START -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="img/logowiki.png" alt="Ascalon Logo" width="40" height="40" class="nav-logo me-2">
+  <span class="fw-bold">Ascalon Wiki</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <!-- Quests -->
+        <li class="nav-item"><a class="nav-link" href="quests.html">Quests</a></li>
+        
+        <!-- Checkpoints -->
+        <li class="nav-item"><a class="nav-link" href="checkpoints.html">Checkpoints</a></li>
+
+        <!-- Outfits -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="outfitsDropdown" role="button">
+            Outfits
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="addons.html">Addons</a></li>
+            <li><a class="dropdown-item" href="mounts.html">Mounts</a></li>
+          </ul>
+        </li>
+
+        <!-- Vocations -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="vocationsDropdown" role="button">
+            Classes
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="vocations.html">Vocations</a></li>
+            <li><a class="dropdown-item" href="spells.html">Spells</a></li>
+          </ul>
+        </li>
+
+        <!-- Items -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="itemsDropdown" role="button">
+            Items
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="items/helmets.html">Helmets</a></li>
+            <li><a class="dropdown-item" href="items/armors.html">Armors</a></li>
+            <li><a class="dropdown-item" href="items/legs.html">Legs</a></li>
+            <li><a class="dropdown-item" href="items/boots.html">Boots</a></li>
+            <li><a class="dropdown-item" href="items/shields.html">Shields</a></li>
+            <li><a class="dropdown-item" href="items/rings.html">Rings</a></li>
+            <li><a class="dropdown-item" href="items/amulets.html">Amulets</a></li>
+            <li><a class="dropdown-item" href="items/trinkets.html">Trinkets</a></li>
+          </ul>
+        </li>
+
+        <!-- Upgrades -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="itemsDropdown" role="button">
+            Upgrades
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="items/gems.html">Gems</a></li>
+            <li><a class="dropdown-item" href="items/stones.html">Stones</a></li>
+            <li><a class="dropdown-item" href="items/crafting.html">Crafting</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--NAVBAR FINISH -->
+
+
+
+
+
+  <!-- Header -->
+<header class="text-center p-5 bg-dark text-light">
+  <h1 class="display-5 fw-bold">Quests</h1>
+  <p class="lead">Complete list of quests in <span class="text-color-one">Ascalon</span>.</p>
+</header>
+
+
+
+
+
+
+
+
+
+  <!-- Main Content -->
+<main class="container my-5">
+  <div class="table-responsive">
+    <table id="questsTable" class="table table-dark table-hover align-middle">
+      <thead class="table-primary">
+        <tr>
+          <th class="text-center"><i class="bi bi-book"></i> Quest</th>
+          <th class="text-center"><i class="bi bi-info-circle"></i> Information</th>
+          <th class="text-center"><i class="bi bi-bar-chart"></i> Min Level</th>
+          <th class="text-center"><i class="bi bi-gift"></i> Rewards</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a href="quests/coloss-arena/coloss-arena.html" class="text-decoration-none text-color-one fw-bold text-start">
+              Coloss Arena
+            </a>
+          </td>
+          <td class="text-start">Survive 60 seconds.</td>
+          <td class="text-center">1</td>
+          <td class="text-start">
+            3x Grade 2 Gems,<br>
+            5x Chicken Feathers,<br>
+            75 Platinum Coins,<br>
+            3000 Experience Points.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="quests/giants/giants-quest.html" class="text-decoration-none text-color-one fw-bold text-start">
+              Giants
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">1</td>
+          <td class="text-start">
+            Mage: Attack Bonus +4%.<br>
+            Archer: Defense Bonus +4%.<br>
+            Knight: Defense Bonus +4%.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Dwarves Survival Annihi
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">1</td>
+          <td class="text-start">
+            Grade 3 Weapon Recipe,<br>
+            Grade 3 Stone,<br>
+            1 Crystal Coin.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Mine Magicians (Dwarves)
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">1</td>
+          <td class="text-start">
+            Attack Bonus: +2%.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Smugglers Camp
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">1</td>
+          <td class="text-start">
+            Magic Crystal Trinket (Invisibility),<br>
+            Graade 2 Stone,<br>
+            Grade 3 Stone,<br>
+            Grade 3 Gem,<br>
+            9000 Experience Points.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Tortoise (Time Ring Quest)
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">1</td>
+          <td class="text-start">
+            Time Ring,<br>
+            Grade 3 Stone,<br>
+            Grade 4 Stone,<br>
+            2x Grade ??? Gems,<br>
+            1 Teleport Scroll.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Mutated Rats (Ascalonian Maze I)
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">1</td>
+          <td class="text-start">Healing Bonus +2%.</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Fire Devils
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">1</td>
+          <td class="text-start">
+            Defense or Attack Bonus: +2%,<br>
+            Grade 2 Stone,<br>
+            Grade 3 Stone,<br>
+            5000 Experience Points.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Green Dragons
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">1</td>
+          <td class="text-start">
+            Mage: +4% Attack Bonus.<br>
+            Knight: +4% Defense Bonus.<br>
+            Archer: +2% Attack and Defense Bonus.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Lizards
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">1</td>
+          <td class="text-start">
+            Lizard Doll Trinket (22% chance to block incoming stuns, fears and silences.),<br>
+            Teleport Scroll,<br> 
+            2x Grade 4 Gems,<br>
+            Grade 4 Stone.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Serpent Spawns (Spell Quest)
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">1<br>(But spell is for level 150)</td>
+          <td class="text-start">
+            Mage: crustallum (Makes target immune to damage and immobilized, casting the spell without target results in a self-cast. If cast on yourself, stuns nearby creatures and restores mana for every creature hit.).<br>
+            Knight: fluctus (Charges to target and stuns if for 1.5 seconds.).<br>
+            Archer: suffitus (Creates a wall of smoke around you, making you invisible for a few seconds).
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Demonic Lurkers
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">60</td>
+          <td class="text-start">
+            Defense or Attack Bonus: +2%,<br>
+            Grade 4 Stone.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Orc Fortress Deep
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">70</td>
+          <td class="text-start">
+            Black Sheep Mount,<br>
+            Scarf,<br>
+            5x Crystal Coins,<br>
+            Grade 5 Gem.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Giganticas
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">70</td>
+          <td class="text-start">
+            Gigantica Mount,<br>
+            Lucky Clover Amulet,<br>
+            Grade 4 Gem,<br>
+            Teleport Scroll.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Taurens Spell Quest
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">75</td>
+          <td class="text-start">
+            Attack or Defense Bonus +2%,<br>
+            Spell:<br>
+            Knight: vercun (Stunning everyone in front of caster).<br>
+            Mage: trepide (Randomly stunning and slowing all nearby creatures).<br>
+            Archer: judico (Knocking the target back and slowing its movement. If target collide with terrain, stunning the target).
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Mutated Rats
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">75</td>
+          <td class="text-start">
+            Healing Bonus +2%,<br>
+            1000 Capacity.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Brooch Tower quest
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">100</td>
+          <td class="text-start">
+            Silver Brooch,<br>
+            5x Crystal Coins,<br>
+            2x Grade 4 Gems,<br>
+            Grade 4 Stone,<br>
+            3x Event Tokens.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Bloody Skeletons
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">100</td>
+          <td class="text-start">
+            Grade 4 Revive Recipe.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Promotion
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Knight:<br>
+            Berserker: Passive: Chance to enter Rage mode which increases the damage in exchange of defence.<br>
+            Crusader: Passive: 10% Chance to revive him or a party member.<br>
+            <br>
+            Archer:<br>
+            Sharpshooter: Passive: Chance to enter Adrenaline mode for around 15 strikes (Attack Speed: +30%).<br>
+            Assassin: Passive: Chance to enter Dodge mode (Dodge: +50%), Critical Strikes deal 2,2x (220% Damage).<br>
+            <br>
+            Mage:<br>
+            Priest: Passive: Half revival cooldown from items.<br>
+            Wizard: Passive: 15% Spells Critical Chance, Criticals do 1.7x (170% Damage).
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Lancer Beetles
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            One of the following rings:<br>
+            Ring of War (Attack Bonus +4%).<br>
+            Ring of Endurance (Defense Bonus +4%).<br>
+            Ring of Healing (Healing Bonus +4%).<br>
+            Grade 5 Stone.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Dworc's Poison
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Mage: Attack Bonus +3%.<br>
+            Archer: Attack Bonus +3%.<br>
+            Knight: Defense Bonus +3%.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Hellhound
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Mage: Attack Bonus +4%.<br>
+            Archer: Attack Bonus +4%.<br>
+            Knight: Defense Bonus +4%.<br>
+            G5 Stone,<br>
+            G5 Gem.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Gargoyles
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Healing Bonus +5%.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Lizard Chosen
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Mage: Attack Bonus +4%.<br>
+            Archer: Attack and Defense Bonus +2%.<br>
+            Knight: Defense Bonus +4%.<br>
+            35000 Experience Points,<br>
+            Grade 6 Stone,<br>
+            2x G5 Gems,<br>
+            Universal Tool,<br>
+            Lottery Ticket,<br>
+            Alchemy Coin.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Steelbeaks
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Healing Bonus +2%.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Priestess Dungeon
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Voodoo Doll Trinket,<br>
+            Healing Bonus +2%.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Ice Witches
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Attack or Defense Bonus +2%,<br>
+            2x Grade 6 Gems,<br>
+            2x Event Tokens.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Arctic Goblins Tower
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Attack or Defense Bonus +2%,<br>
+            3x Grade 6 Gems.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Necromancers
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Grade 7 Revive recipe.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Red Dragons
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Platinum Amulet,<br>
+            2x Grade 6 Gems,<br>
+            2x Grade 6 Stones.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Hags
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Swiftness Ring,<br>
+            2x Grade 5 Gems.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Fungus Quest
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Ebony Tiger Mount,<br>
+            Dark Hydra Access.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Ice Golem "DHQ"
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">150</td>
+          <td class="text-start">
+            Mage: Grade 7 recipe [800 Mana Points].<br>
+            Archer: Grade 7 recipe [+800 Mana Points].<br>
+            Knight: Grade 7 recipe [+500 Heal Points].
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Drakens
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">200</td>
+          <td class="text-start">
+            Aggression Amulet,<br>
+            Ascalon Token,<br>
+            Grade 6 Stone.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Arachnids
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">230</td>
+          <td class="text-start">
+            Vocation Ring:<br>
+            Wizard Ring.<br>
+            Priest Ring.<br>
+            Crusader Ring.<br>
+            Berserker Ring.<br>
+            Assassin Ring.<br>
+            Sharpshooter Ring.
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Swomp Quest
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">230</td>
+          <td class="text-start">
+            Defense Bonus: +2%<br>
+            5 Crystal Coins,<br>
+            3x Event Tokens.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Mutated Tigers
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">240</td>
+          <td class="text-start">
+            Healing Bonus +5%,<br>
+            1000 Capacity.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Solo Arena
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250</td>
+          <td class="text-start">
+            Attack or Defense Bonus +2%.
+          </td>
+        </tr> 
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Wyrms
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250</td>
+          <td class="text-start">
+            Mythical Orb Trinket.
+          </td>
+        </tr> 
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Toxic Bugs
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">230</td>
+          <td class="text-start">
+            Midnight Panther Mount.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Golems
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250</td>
+          <td class="text-start">
+            Attack and Defense Bonus +5%,<br>
+            3x Grade 7 Gems,<br>
+            Grade 7 Stone,<br>
+            10x Event Tokens.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Wyrm Pride
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250</td>
+          <td class="text-start">
+            Attack or Defense Bonus +2%,<br>
+            Healing Bonus +2%.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Undead Bulwark
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250</td>
+          <td class="text-start">
+            Spell:
+            Wizard: inrepo (Silences a target for 1 seconds and stealing part of his mana).<br>
+            Priest: ??.<br>
+            Crusader: ??.<br>
+            Berserker: ??.<br>
+            Assassin: ??.<br>
+            Sharpshooter: ??.<br>
+            Grade 7 Stone,<br>
+            Grade 7 Gem,<br>
+            Teleport Scroll,<br>
+            35.000 Experience Points.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Grapplers and Beholders
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250</td>
+          <td class="text-start">
+            Attack or Defense Bonus +2%,<br>
+            Artifact of Sacrifice,<br>
+            8 Crystal Coins.<br>
+            If you kill Dalburn:<br>
+            3x Event Tokens,<br>
+            4x Grade 7 Gems,<br>
+            2x Mastermind Potions.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Draptors
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250<br>(Inside chests for 350)</td>
+          <td class="text-start">
+            Attack or Defense Bonus +2%,<br>
+            Healing Bonus +2%.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Arctic Horror
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250</td>
+          <td class="text-start">
+            Attack or Defense Bonus +2%,<br>
+            50.000 Experience Points.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Sands of Time
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250</td>
+          <td class="text-start">
+            G7 Shield / Hand Charm:<br>
+            Wizard: Shield of Concentration.<br>
+            Priest: Blessed Shield.<br>
+            Berserker: Serpentine Dagger.<br>
+            Crusader: The Reflector.<br>
+            Sharpshooter: Onyx Arrows.<br>
+            Assassin: ??.<br>
+            2x Grade 7 Gems,<br>
+            2x Grade 7 Stone,<br>
+            Grade 6 Stone,<br>
+            80.000 Experience Points.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Golden Dragon Annihilator
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250</td>
+          <td class="text-start">
+            Immunity amulet crafting recipe,<br>
+            2x Grade 7 Stones,<br>
+            3x Grade 7 Gems,<br>
+            40.000 Experience Points.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Duo Arena
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250</td>
+          <td class="text-start">
+            Random Grade 6 Weapon Recipe.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Undertakers Ring (Disgustings)
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250</td>
+          <td class="text-start">
+            Undertaking Ring,<br>
+            3x Grade 7 Stones,<br>
+            4x Grade 7 Gems,<br>
+            2x Grade 7 Tools.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Grade 8 Weapon
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">250</td>
+          <td class="text-start">
+            Grade 8 Weapon:<br>
+            Wizard: Wand of Starstorm.<br>
+            Priest: Crystal Sceptre.<br>
+            Berserker: Stomper.<br>
+            Crusader: ??.<br>
+            Sharpshooter: ??.<br>
+            Assassin: ??.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Elements Sphere
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">300</td>
+          <td class="text-start">
+            Random Grade 7 Weapon Crafting Recipe.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Omega Lurkers
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">300</td>
+          <td class="text-start">
+            Attack or Defense Bonus: +4%.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Crystalsmashers Treasure
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">300</td>
+          <td class="text-start">
+            6x Grade 7 Gems,<br>
+            Grade 8 Stone,<br>
+            7x Event Tokens.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Succubus Den
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">320</td>
+          <td class="text-start">
+            Attack or Defense Bonus: +4%,<br>
+            Tin Lizard Mount.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Jungle Beasts Accesses Quest
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">350</td>
+          <td class="text-start">
+            Access to Demon Skeletons and Goblins,<br>
+            Defense Bonus +2%.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Devourer Quest
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">350</td>
+          <td class="text-start">
+            Enchanted Skull,<br>
+            Hallowed Axe (Access to Infernal Mages),<br>
+            3x Grade 8 Gems,<br>
+            Grade 8 Stone.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Granirk Quest
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">350</td>
+          <td class="text-start">
+            Attack or Defense Bonus: +4%,<br>
+            Ascalon Token.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Infernal Mages Spell Blessing
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">350</td>
+          <td class="text-start">
+            Grade 7 Helmet Recipe [Defense Bonus: +4%],<br>
+            Grade 8 Stone,<br>
+            Buff Spell Upgrade:<br>
+            Wizard: The Advanced Concentration spell now gives -60% defense bonus and +75% attack bonus, instead of -80% defense bonus and +60% attack bonus.<br>
+            Priest: ??.<br>
+            Berserker: ??.<br>
+            Crusader: ??.<br>
+            Sharpshooter: ??.<br> 
+            Assassin: ??.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Mecha Golems Access
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">350</td>
+          <td class="text-start">
+            Mecha Golems Access,<br>
+            5x Grade 8 Gems,<br>
+            Experience Points.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Fish Quest
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">350</td>
+          <td class="text-start">
+            Doombringer Mount,<br>
+            Random Grade 7 Weapon Recipe [Lifesteal: 18%, Critical Chance: 14% and Stun Chance: 15%, Multiple Hit: 14%].
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Jungle Beasts Quest
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">350</td>
+          <td class="text-start">
+            Attack Bonus: +5%.<br>
+            Grade 8 Helmet Recipe [7% Critical Chance].
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Dreamhaunters Chest
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">400</td>
+          <td class="text-start">
+            Attack Bonus: +1%.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Frosthaven Guard NPC
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">400</td>
+          <td class="text-start">
+            Access to Frosthaven,<br>
+            Attack Bonus: +2%.
+          </td>
+        </tr> 
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Edric Quest
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">400</td>
+          <td class="text-start">
+            Access to Frozemoth,<br>
+            Access to Chillgore Knights,<br>
+            Winter Warden Outfit,<br>
+            Attack Bonus: 4+% (In hand statue).
+          </td>
+        </tr> 
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              Ice Arena Trinket
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">400</td>
+          <td class="text-start">
+            Sinister Archer Outfit,<br>
+            Ammo Slot Trinket:<br>
+            Wizard: Carrnonite Crystal<br>
+            Priest: Halzite Crystal.<br>
+            Berserker: ??.<br>
+            Crusader: ??.<br>
+            Sharpshooter: ??.<br>
+            Assassin: ??.
+          </td>
+        </tr> 
+
+
+
+        <!-- 
+        <tr>
+          <td>
+            <a href="#" class="text-decoration-none text-color-one fw-bold text-start">
+              #
+            </a>
+          </td>
+          <td class="text-start">#</td>
+          <td class="text-center">#</td>
+          <td class="text-start">
+            #
+          </td>
+        </tr> 
+        -->
+
+
+
+      </tbody>
+    </table>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+<footer class="text-center p-3 bg-dark text-secondary small">
+  <p class="m-0">Built by <strong class="text-color-one">Relaxx</strong> · Ascalon.Online Wiki © 2025</p>
+</footer>
+
+
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery + DataTables JS -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+  <!-- My js -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

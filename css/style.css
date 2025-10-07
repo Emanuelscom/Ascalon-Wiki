@@ -1,0 +1,259 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* === BODY === */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-color-one {
+  color: #527fac;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background-color: #1c1c1c !important;
+}
+
+.nav-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.navbar-brand {
+  color: #527fac !important;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #e0e0e0 !important;
+}
+
+.nav-link:hover {
+  color: #527fac !important;
+}
+
+/* Dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  background-color: #1c1c1c;
+  border: none;
+  margin-top: 0;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #e0e0e0;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #121212;
+  color: #527fac;
+}
+
+/* === HEADER === */
+header {
+  background: #181818;
+}
+
+header h1 {
+  color: #527fac;
+}
+
+/* === MAIN CONTENT === */
+main {
+  flex: 1;
+}
+
+main h2 {
+  color: #527fac;
+  text-decoration: none;
+}
+
+/* Tarjetas del Index */
+.card {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #365370;
+}
+
+.card img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  background-color: #1e2a38;
+  padding: 45px;
+  transition: transform 0.3s;
+  filter: brightness(0.6);
+}
+
+.card h3 {
+  color: #B0B0B0;
+  text-shadow: 0 0 10px #000;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.9);
+}
+
+.card:hover h3 {
+  color: rgba(var(--bs-light-rgb), var(--bs-text-opacity));
+}
+
+/* === TABLES === */
+
+/* Alinea ícono y texto del encabezado en una sola línea sin romper DataTables */
+table.dataTable thead th {
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+}
+
+table.dataTable thead th .d-inline-flex,
+table.dataTable thead th span,
+table.dataTable thead th i {
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+/* Espacio entre icono y texto */
+table.dataTable thead th i {
+  margin-right: 6px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Fondo general oscuro uniforme */
+.table-dark {
+  background-color: #0e141b !important;
+  color: #e0e6ef !important;
+}
+
+/* Encabezados de tablas personalizados */
+#questsTable thead th,
+#mountsTable thead th,
+#addonsTable thead th,
+#checkpointsTable thead th {
+  background-color: #27496d !important; /* un azul más vivo */
+  color: #eaf2ff !important;
+  font-weight: 600;
+  border-bottom: 2px solid #365370 !important;
+  text-transform: uppercase;
+}
+
+
+
+/* Hover más elegante (azulado) */
+#questsTable tbody tr:hover td,
+#addonsTable tbody tr:hover td,
+#mountsTable tbody tr:hover td,
+#checkpointsTable tbody tr:hover td {
+  background-color: #223547 !important;
+  color: #ffffff !important;
+}
+
+/* Asegura que los links dentro de tablas sean legibles */
+#questsTable tbody tr:hover a,
+#addonsTable tbody tr:hover a,
+#mountsTable tbody tr:hover a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* Bordes sutiles entre filas */
+.table td,
+.table th {
+  border-color: #2a3a4d !important;
+}
+
+
+/* === SPELLS NAV-TABS === */
+.nav-tabs {
+  border-bottom: 2px solid #27496d; /* línea inferior azul */
+  justify-content: center;
+}
+
+.nav-tabs .nav-link {
+  color: #b0c4de; /* texto normal */
+  background-color: #1a1a1a; /* fondo oscuro */
+  border: 1px solid #27496d;
+  border-bottom: none;
+  margin: 0 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover */
+.nav-tabs .nav-link:hover {
+  color: #ffffff;
+  background-color: #223547;
+  border-color: #365370;
+}
+
+/* Activa */
+.nav-tabs .nav-link.active {
+  color: #eaf2ff !important; /* texto claro */
+  background-color: #27496d !important; /* mismo azul que el resto */
+  border-color: #27496d #27496d #0f1a26 !important;
+  font-weight: 600;
+}
+
+/* === TABLES (SPELLS) === */
+
+/* Encabezado */
+.table thead th {
+  background-color: #27496d !important; /* azul uniforme */
+  color: #eaf2ff !important;
+  border-bottom: 2px solid #365370 !important;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Cuerpo */
+.table-dark {
+  background-color: #0e141b !important;
+  color: #e0e6ef !important;
+}
+
+/* Hover */
+.table-hover tbody tr:hover td {
+  background-color: #223547 !important;
+  color: #ffffff !important;
+}
+
+/* Bordes */
+.table td,
+.table th {
+  border-color: #2a3a4d !important;
+}
+
+/* Centrar columnas "Level" y "Cooldown" en todas las tablas */
+.table td:nth-child(3),
+.table td:nth-child(4),
+.table td:nth-child(6),
+.table th:nth-child(3),
+.table th:nth-child(4)
+.table th:nth-child(6) {
+  text-align: center;
+}
+
+
+
+
+
+/* === FOOTER === */
+footer {
+  background-color: #1c1c1c;
+  flex-shrink: 0;
+}

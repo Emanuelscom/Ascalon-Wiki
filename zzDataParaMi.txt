@@ -1,0 +1,15 @@
+resize:
+https://redketchup.io/
+
+Eliminar Fondo:
+https://www.photoroom.com/es/herramientas/eliminador-de-fondos
+
+GIF maker:
+https://ezgif.com/maker
+50 speed.
+
+Imágenes del index:
+1:1 Cuadradas.
+400x400 px mínimo (para que no se vean pixeladas).
+600x600 px si querés mejor calidad en pantallas grandes.
+Formato .jpg o .webp para que carguen rápido.
