@@ -129,3 +129,53 @@ $(document).ready(function() {
   // Trigger inicial para All (solo comunes)
   $('#groupFilter').trigger('change');
 });
+
+
+
+
+// === LOAD NAVBAR ===
+document.addEventListener("DOMContentLoaded", function() {
+  const currentPath = window.location.pathname;
+  const inSubfolder =
+    currentPath.includes("/items/") ||
+    currentPath.includes("/quests/");
+
+  // Ruta de la navbar
+  const navbarPath = inSubfolder ? "../components/navbar.html" : "components/navbar.html";
+
+  fetch(navbarPath)
+    .then(res => {
+      if (!res.ok) throw new Error("No se pudo cargar la navbar: " + res.status);
+      return res.text();
+    })
+    .then(html => {
+      const placeholder = document.getElementById("navbar-placeholder");
+      placeholder.innerHTML = html;
+
+      const basePath = inSubfolder ? "../" : "";
+
+      // Corrige todos los links y sus rutas relativas
+      placeholder.querySelectorAll("a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (!href || href.startsWith("http") || href.startsWith("#")) return;
+
+        // Si son páginas de items (gems, stones, crafting), fuerza ../items/
+        if (["gems.html", "stones.html", "crafting.html"].includes(href)) {
+          link.setAttribute("href", basePath + "items/" + href);
+        }
+        // En cualquier otro caso, simplemente antepone ../ si hace falta
+        else {
+          link.setAttribute("href", basePath + href);
+        }
+      });
+
+      // Corrige imágenes (como el logo)
+      placeholder.querySelectorAll("img").forEach(img => {
+        const src = img.getAttribute("src");
+        if (src && !src.startsWith("http")) {
+          img.setAttribute("src", basePath + src);
+        }
+      });
+    })
+    .catch(err => console.error("Error cargando la navbar:", err));
+});
