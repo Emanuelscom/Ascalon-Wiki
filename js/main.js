@@ -179,3 +179,44 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .catch(err => console.error("Error cargando la navbar:", err));
 });
+
+// === LOAD FOOTER ===
+document.addEventListener("DOMContentLoaded", function() {
+  const currentPath = window.location.pathname;
+  const inSubfolder =
+    currentPath.includes("/items/") ||
+    currentPath.includes("/quests/");
+
+  // Ruta base (igual que navbar)
+  const basePath = inSubfolder ? "../" : "";
+
+  // Ruta del footer
+  const footerPath = inSubfolder ? "../components/footer.html" : "components/footer.html";
+
+  fetch(footerPath)
+    .then(res => {
+      if (!res.ok) throw new Error("No se pudo cargar el footer: " + res.status);
+      return res.text();
+    })
+    .then(html => {
+      const placeholder = document.getElementById("footer-placeholder");
+      if (placeholder) {  // Solo si existe el placeholder
+        placeholder.innerHTML = html;
+
+        // Corrige cualquier link/img en el footer (por si agregás algo después)
+        placeholder.querySelectorAll("a").forEach(link => {
+          const href = link.getAttribute("href");
+          if (!href || href.startsWith("http") || href.startsWith("#")) return;
+          link.setAttribute("href", basePath + href);
+        });
+
+        placeholder.querySelectorAll("img").forEach(img => {
+          const src = img.getAttribute("src");
+          if (src && !src.startsWith("http")) {
+            img.setAttribute("src", basePath + src);
+          }
+        });
+      }
+    })
+    .catch(err => console.error("Error cargando el footer:", err));
+});
