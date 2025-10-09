@@ -40,21 +40,26 @@ body {
   color: #527fac !important;
 }
 
-/* Dropdown */
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-  background-color: #1c1c1c;
-  border: none;
-  margin-top: 0;
+/* Dropdowns base (sin duplicar comportamiento hover) */
+.navbar .dropdown-menu {
+  background-color: #1c1c1c !important;
+  border: none !important;  /* Sin borde azul/gris */
+  box-shadow: none !important;
+  min-width: 180px;
+  pointer-events: auto;
+  margin-top: 0 !important;  /* Sin espacio arriba (fijó gap y disappearing al scroll) */
+  z-index: 1050 !important;  /* Alto z-index para no desaparecer al scroll */
 }
 
-.dropdown-menu .dropdown-item {
-  color: #e0e0e0;
+.navbar .dropdown-item {
+  color: #e0e0e0 !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.dropdown-menu .dropdown-item:hover {
-  background-color: #121212;
-  color: #527fac;
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  background-color: #1c1c1c !important;
+  color: #527fac !important;
 }
 
 /* === HEADER === */
@@ -76,7 +81,7 @@ main h2 {
   text-decoration: none;
 }
 
-/* Tarjetas del Index */
+/* Tarjetas del Index (color y brillo restaurado) */
 .card {
   position: relative;
   width: 100%;
@@ -84,78 +89,62 @@ main h2 {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 0 8px #365370;
+  background-color: #141c26;
+  transition: transform 0.3s, background-color 0.3s, filter 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover {
+  background-color: #223547;
 }
 
 .card img {
   object-fit: contain;
-  height: 100%;
+  height: 160px;
   width: 100%;
-  background-color: #1e2a38;
-  padding: 45px;
-  transition: transform 0.3s;
+  padding: 30px;
   filter: brightness(0.6);
-}
-
-.card h3 {
-  color: #B0B0B0;
-  text-shadow: 0 0 10px #000;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 5px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  background-color: transparent !important;
 }
 
 .card:hover img {
-  transform: scale(1.1);
-  filter: brightness(0.9);
+  transform: scale(1.05);
+  filter: brightness(0.7);
 }
 
-.card:hover h3 {
-  color: rgba(var(--bs-light-rgb), var(--bs-text-opacity));
+.card h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #e0e0e0;
+  margin-top: 10px;
 }
 
 /* === TABLES === */
-
-/* Alinea ícono y texto del encabezado en una sola línea sin romper DataTables */
 table.dataTable thead th {
   white-space: nowrap !important;
   vertical-align: middle !important;
 }
 
-table.dataTable thead th .d-inline-flex,
-table.dataTable thead th span,
-table.dataTable thead th i {
-  display: inline-block !important;
-  vertical-align: middle !important;
-}
-
-/* Espacio entre icono y texto */
-table.dataTable thead th i {
-  margin-right: 6px;
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
-/* Fondo general oscuro uniforme */
 .table-dark {
   background-color: #0e141b !important;
   color: #e0e6ef !important;
 }
 
-/* Encabezados de tablas personalizados */
 #questsTable thead th,
 #mountsTable thead th,
 #addonsTable thead th,
 #checkpointsTable thead th {
-  background-color: #27496d !important; /* un azul más vivo */
+  background-color: #27496d !important;
   color: #eaf2ff !important;
   font-weight: 600;
   border-bottom: 2px solid #365370 !important;
   text-transform: uppercase;
 }
 
-
-
-/* Hover más elegante (azulado) */
 #questsTable tbody tr:hover td,
 #addonsTable tbody tr:hover td,
 #mountsTable tbody tr:hover td,
@@ -164,170 +153,47 @@ table.dataTable thead th i {
   color: #ffffff !important;
 }
 
-/* Asegura que los links dentro de tablas sean legibles */
-#questsTable tbody tr:hover a,
-#addonsTable tbody tr:hover a,
-#mountsTable tbody tr:hover a {
-  color: #ffffff !important;
-  text-decoration: none !important;
-}
-
-/* Bordes sutiles entre filas */
 .table td,
 .table th {
   border-color: #2a3a4d !important;
 }
 
-
 /* === SPELLS NAV-TABS === */
 .nav-tabs {
-  border-bottom: 2px solid #27496d; /* línea inferior azul */
+  border-bottom: 2px solid #27496d;
   justify-content: center;
 }
 
 .nav-tabs .nav-link {
-  color: #b0c4de; /* texto normal */
-  background-color: #1a1a1a; /* fondo oscuro */
+  color: #b0c4de;
+  background-color: #1a1a1a;
   border: 1px solid #27496d;
   border-bottom: none;
   margin: 0 4px;
   transition: all 0.2s ease-in-out;
 }
 
-/* Hover */
 .nav-tabs .nav-link:hover {
   color: #ffffff;
   background-color: #223547;
   border-color: #365370;
 }
 
-/* Activa */
 .nav-tabs .nav-link.active {
-  color: #eaf2ff !important; /* texto claro */
-  background-color: #27496d !important; /* mismo azul que el resto */
+  color: #eaf2ff !important;
+  background-color: #27496d !important;
   border-color: #27496d #27496d #0f1a26 !important;
   font-weight: 600;
 }
 
-/* === TABLES (SPELLS) === */
-
-/* Encabezado */
-.table thead th {
-  background-color: #27496d !important; /* azul uniforme */
-  color: #eaf2ff !important;
-  border-bottom: 2px solid #365370 !important;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-/* Cuerpo */
-.table-dark {
-  background-color: #0e141b !important;
-  color: #e0e6ef !important;
-}
-
-/* Hover */
-.table-hover tbody tr:hover td {
-  background-color: #223547 !important;
-  color: #ffffff !important;
-}
-
-/* Bordes */
-.table td,
-.table th {
-  border-color: #2a3a4d !important;
-}
-
-/* Centrar columnas "Level" y "Cooldown" en todas las tablas */
-.table td:nth-child(3),
-.table td:nth-child(4),
-.table td:nth-child(6),
-.table th:nth-child(3),
-.table th:nth-child(4)
-.table th:nth-child(6) {
-  text-align: center;
-}
-
-/* Fixes para Spells Table - Full-width y sin scroll horizontal */
-#spellsTable_wrapper {
-  width: 100% !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;  /* Mata el scroll horizontal forzado */
-}
-
-#spellsTable {
-  width: 100% !important;
-  table-layout: fixed;  /* Fuerza columnas fijas para evitar desborde */
-  overflow-x: hidden;  /* Doble seguro contra scroll */
-}
-
+/* === SPELLS TABLE === */
 #spellsTable img {
-  width: 250px !important;  /* Ancho FIJO: todas iguales, sin variar */
-  height: auto !important;  /* Alto auto: se ajusta proporcional */
-  object-fit: contain;  /* Mantiene proporción, centra si hace falta – no distorsiona */
-  display: block;  /* Centra la img en su celda */
-  margin: 0 auto;  /* Centrado horizontal en la celda */
+  width: 250px !important;
+  height: auto !important;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
-
-#spellsTable th:nth-child(2),  /* Spell */
-#spellsTable td:nth-child(2) {
-  width: 10%;  /* Chiquita */
-}
-
-#spellsTable th:nth-child(3),  /* Description */
-#spellsTable td:nth-child(3) {
-  width: 30%;  /* Un toque menos para dar espacio a imgs */
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-}
-
-#spellsTable th:nth-child(4),  /* Level */
-#spellsTable td:nth-child(4) {
-  width: 6%;  /* Muy chica, es un número */
-}
-
-#spellsTable th:nth-child(5),  /* Cooldown */
-#spellsTable td:nth-child(5) {
-  width: 6%;  /* Muy chica */
-}
-
-#spellsTable th:nth-child(6),  /* Vocation */
-#spellsTable td:nth-child(6) {
-  width: 12%;  /* Suficiente */
-}
-
-#spellsTable th:nth-child(7),  /* Image */
-#spellsTable td:nth-child(7) {
-  width: 25%;  /* Más ancho para imgs grandes – clave! */
-}
-
-/* En mobile, achica pero visible */
-@media (max-width: 768px) {
-  #spellsTable img {
-    width: 180px !important;  /* Ancho fijo en phone también */
-    height: auto !important;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  #spellsTable td:nth-child(3) {
-    white-space: normal;
-    font-size: 0.75rem;  /* Letra más chica en mobile */
-  }
-  
-  .table-responsive {
-    font-size: 0.75rem;
-  }
-}
-
-
-
-
-
-
-
 
 /* === FOOTER === */
 footer {

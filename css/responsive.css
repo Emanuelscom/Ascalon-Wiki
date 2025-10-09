@@ -1,0 +1,162 @@
+/* responsive.css - Estilos responsivos para Ascalon Wiki */
+
+/* ====== GENERAL ====== */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-bottom: 2rem;
+  }
+
+  main {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* ====== HEADER ====== */
+@media (max-width: 575.98px) {
+  header {
+    padding: 1rem 0.5rem !important;
+  }
+
+  header h1.display-5 {
+    font-size: 1.5rem !important;
+  }
+
+  header p.lead {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ====== CARDS ====== */
+@media (max-width: 575.98px) {
+  .row.g-4 > div.col-md-3 {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    aspect-ratio: 1 / 1 !important;  /* Cuadrado perfecto */
+    max-height: 100px !important;  /* Limita alto para cuadrado */
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    overflow: hidden;
+  }
+
+  .card img {
+    height: 80% !important;  /* GIFs 80% de la card para no chocar con título */
+    padding: 10px !important;
+  }
+
+  .card h3 {
+    font-size: 0.9rem !important;
+    margin-top: 0 !important;  /* Sin margin top para no inflar */
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .row.g-4 > div.col-md-3 {
+    width: 90% !important;
+    margin: 0 auto 1rem auto;
+  }
+
+  .card {
+    height: 160px !important;
+  }
+
+  .card img {
+    height: 120px !important;
+    padding: 20px !important;
+  }
+
+  .card h3 {
+    font-size: 1rem !important;
+    margin-top: 10px !important;
+  }
+}
+
+/* ====== NAVBAR ====== */
+
+/* Hover solo en desktop */
+@media (min-width: 992px) {
+  .navbar .nav-item.dropdown:hover .dropdown-menu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* Mobile y tablet: click para abrir (no hover) */
+@media (max-width: 991.98px) {
+  .navbar .nav-item.dropdown:hover .dropdown-menu {
+    display: none !important;
+  }
+
+  .navbar-collapse {
+    padding: 1rem;
+    background-color: #1c1c1c !important;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem !important;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    text-align: center;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Mobile: Desactiva hover en toggle para evitar parpadeo */
+@media (max-width: 991.98px) {
+  .dropdown-toggle {
+    pointer-events: none;  /* Ignora hover en mobile, fuerza click */
+  }
+
+  .dropdown-toggle:focus-within {
+    pointer-events: auto;  /* Re-activa al focus (click) */
+  }
+}
+
+/* ======================
+   MAIN TITLE ("Game Guide") - separacion extra en tablet
+   ====================== */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .page-title {
+    margin-bottom: 3rem !important; /* más espacio bajo el título */
+  }
+}
+
+/* ======================
+   CARDS WIDTH AJUSTADO EN MOBILE
+   ====================== */
+@media (max-width: 575.98px) {
+  .card-container {
+    width: 99% !important; /* 🔹 más angostas en móviles */
+    margin: 0 auto 1rem auto !important; /* centradas con espacio abajo */
+  }
+
+  .page-title {
+    margin-bottom: 0 !important; /* también un poco de aire debajo del título */
+  }
+}
+
+/* ====== FOOTER ====== */
+@media (max-width: 768px) {
+  footer {
+    padding: 1rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  footer p {
+    margin: 0 !important;
+    line-height: 1.2;
+  }
+}
